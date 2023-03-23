@@ -29,7 +29,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         countries += ["estonia","france","germany","ireland","italy","monaco","nigeria","poland","russia","spain","uk","us"]
 
-        configureButton()
         askQuestion()
     }
 
@@ -47,14 +46,6 @@ class ViewController: UIViewController {
             questionCountLabel.text = "\(questionCount)"
         }
     }
-    func configureButton() {
-        firstFlagButton.layer.borderWidth = 1
-        secondFlagButton.layer.borderWidth = 1
-        thirdFlagButton.layer.borderWidth = 1
-        firstFlagButton.layer.borderColor = UIColor.lightGray.cgColor
-        secondFlagButton.layer.borderColor = UIColor.lightGray.cgColor
-        thirdFlagButton.layer.borderColor = UIColor.lightGray.cgColor
-    }
     
     func restartGame(action: UIAlertAction! = nil) {
         score = 0
@@ -67,7 +58,6 @@ class ViewController: UIViewController {
     func exitTheGame(action: UIAlertAction! = nil){
         exit(0)
     }
-    
     @IBAction func buttonTapped(_ sender: UIButton) {
         if sender.tag == correctAnswer {
             score += 1
